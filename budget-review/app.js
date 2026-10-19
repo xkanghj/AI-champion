@@ -2,7 +2,7 @@
 // 같은 폴더의 JSON을 먼저 읽고, 없으면 GitHub 원본을 읽는다
 const DATA_SOURCES = [
   "신청목록.json",
-  "https://raw.githubusercontent.com/xkanghj/ai-champion/main/budget-review/%EC%8B%A0%EC%B2%AD%EB%AA%A9%EB%A1%9D.json",
+  "https://raw.githubusercontent.com/xkanghj/AI-champion/main/budget-review/%EC%8B%A0%EC%B2%AD%EB%AA%A9%EB%A1%9D.json",
 ];
 const fmt = (n) => n.toLocaleString("ko-KR");
 
