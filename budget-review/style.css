@@ -1,0 +1,80 @@
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --text: #1c2430;
+  --muted: #6b7480;
+  --line: #e3e6ea;
+  --ok: #1f7a4d;
+  --ok-bg: #e6f4ec;
+  --no: #b3261e;
+  --no-bg: #fbe9e7;
+  --accent: #2b4c7e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 40px 16px 56px; }
+
+.eyebrow { margin: 0; color: var(--accent); font-weight: 700; font-size: 14px; }
+h1 { margin: 4px 0 8px; font-size: 26px; }
+.rule { margin: 0 0 24px; color: var(--muted); font-size: 14px; }
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.label { color: var(--muted); font-size: 13px; }
+.value { font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.table-wrap {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow-x: auto;
+}
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { padding: 12px 14px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { background: #fafbfc; text-align: left; font-size: 13px; color: var(--muted); font-weight: 600; }
+tbody tr:last-child td { border-bottom: none; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.center { text-align: center; }
+.muted { color: var(--muted); }
+
+.ok { color: var(--ok); }
+.no { color: var(--no); }
+.badge {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.badge.ok { background: var(--ok-bg); }
+.badge.no { background: var(--no-bg); }
+tr.rejected td:first-child { box-shadow: inset 3px 0 0 var(--no); }
+
+.note { color: var(--muted); font-size: 13px; margin-top: 12px; }
+
+@media (max-width: 560px) {
+  .summary { grid-template-columns: 1fr; }
+  h1 { font-size: 22px; }
+}

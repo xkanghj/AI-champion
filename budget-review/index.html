@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>협력사업 예산 심사</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">자치행정 협력사업</p>
+      <h1>지자체 신청 예산 자동 심사</h1>
+      <p class="rule">심사 규칙: 한도액 = 인구수 × 10 · 신청액 &gt; 한도액이면 <b class="no">반려</b>, 같거나 작으면 <b class="ok">승인</b></p>
+    </header>
+
+    <section class="summary" aria-label="심사 요약">
+      <div class="card">
+        <span class="label">승인 건수</span>
+        <span class="value ok" id="approvedCount">-</span>
+      </div>
+      <div class="card">
+        <span class="label">반려 건수</span>
+        <span class="value no" id="rejectedCount">-</span>
+      </div>
+      <div class="card">
+        <span class="label">승인 신청액 합계</span>
+        <span class="value" id="approvedSum">-</span>
+      </div>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>지자체명</th>
+            <th class="num">인구수</th>
+            <th class="num">신청액</th>
+            <th class="num">한도액</th>
+            <th class="center">판정</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr><td colspan="5" class="center muted">신청목록을 불러오는 중…</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <p class="note" id="status"></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
